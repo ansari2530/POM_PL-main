@@ -4,7 +4,7 @@ import {SignUpPage1} from '../pages/Signup1';
 import {header} from '../pages/header';
 import {connect} from '../pages/connect';
 import {visiprof} from '../pages/visiprof';
-
+import {myprof} from '../pages/myprof';
 
 test.beforeEach(async ({ page }) => {
 
@@ -12,7 +12,7 @@ test.beforeEach(async ({ page }) => {
   await page.goto('https://beta.yocket.com/login');
 
   const a = new SignUpPage1(page);
-  await a.SignUp ('7')
+  await a.SignUp ('9456167217')
 
   const b = new OtpPage (page);
   await b.OTP ()
@@ -50,3 +50,23 @@ test('university page navigation from visitors profile', async ({ page }) => {
 
 });
 
+
+test('university page navigation from My Profile', async ({ page }) => {
+
+  const c = new header (page)
+  await c.profileclick ()
+
+  const f = new myprof (page)
+  await f.MPapplicationclick ()
+  await f.univnameclick()
+
+
+  // await page.getByRole('button', { name: 'user profile' }).click();
+  // await page.getByRole('link', { name: 'My Profile' }).click();
+  // await page.getByRole('link', { name: 'Applications (5)' }).click();
+  // await page.locator('#ProfileUserApplications div').filter({ hasText: 'Northeastern University, Boston Masters Computer Science (Align) Edit Edit Statu' }).nth(3).click();
+  // await page.getByRole('link', { name: 'Northeastern University, Boston' }).first().click();
+  
+
+
+});
