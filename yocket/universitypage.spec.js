@@ -61,7 +61,11 @@ test('university page navigation from My Profile', async ({ page }) => {
   await f.univnameclick()
 
 
-  
+  // await page.getByRole('button', { name: 'user profile' }).click();
+  // await page.getByRole('link', { name: 'My Profile' }).click();
+  // await page.getByRole('link', { name: 'Applications (5)' }).click();
+  // await page.locator('#ProfileUserApplications div').filter({ hasText: 'Northeastern University, Boston Masters Computer Science (Align) Edit Edit Statu' }).nth(3).click();
+  // await page.getByRole('link', { name: 'Northeastern University, Boston' }).first().click();
   
 
 
