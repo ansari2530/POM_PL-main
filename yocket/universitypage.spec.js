@@ -12,7 +12,7 @@ test.beforeEach(async ({ page }) => {
   await page.goto('https://beta.yocket.com/login');
 
   const a = new SignUpPage1(page);
-  await a.SignUp ('9456167217')
+  await a.SignUp ('7')
 
   const b = new OtpPage (page);
   await b.OTP ()
