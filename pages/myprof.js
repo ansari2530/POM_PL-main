@@ -6,7 +6,7 @@ exports.myprof = class myprof {
 
        this.page = page
        this.MPapplication = page.locator('xpath = //ul[@class="flex list-reset min-h-max"]/li[3]')
-       this.univname = page.locator ('data-test="my-application-univeristy-name-0"')
+       this.univname = page.locator ('xpath = //div[@data-test="my-application-univeristy-name-0"]')
 
     }
 
